@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/SectionContainer.astro'
+import Button from '../components/Button.astro'
+import Projects from '../components/Projects.astro'
+import Techno from '../components/Technology.astro';
+import Link from '../components/Link.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import LinktreeIcon from '../components/icons/Linktree.astro';
+---
+
+<Layout 
+	title="NixiusDev"
+	description="Specializing in graphic design, web development, and programming, committed to providing creative and functional solutions for your projects."
+>
+    <main class="max-w-4xl mx-auto">
+		<Section className="items-center h-screen">
+			<div class="text-center mb-8">
+				<h1 class="text-[290px] leading-[12.5rem] text-customWhite font-dharma-gothic mb-4">NixiusDev</h1>
+				<p class="text-4xl text-lightWhite">Design or programming? The answer is yes.</p>
+			</div>
+			
+			<div class="flex">
+				<Button link='/CV-BENHADI-Nourddin.webp' className="px-12 bg-customViolet">
+					Download CV
+				</Button>
+				<Button link="https://github.com/nxrddinbnh" className="px-3 bg-customViolet">
+					<GitHubIcon />
+				</Button>
+				<Button link="https://linktr.ee/nixiusdev_" className="px-3 bg-linktree">
+					<LinktreeIcon />
+				</Button>
+			</div>
+		</Section>
+
+		<Section id="work" title={ { first: "MY", second: "WORK", bg: "PROJECTS" } }>
+			<Projects />
+		</Section>
+
+		<Section id="about" title={ { first: "ABOUT", second: "ME", bg: "ABOUT ME" } }>
+			<p class="text-parraf font-[400] text-left">
+				My passion for <span class="text-importantParraf font-[300]">graphic design began in <b>2020</b></span>, when I accidentally stumbled into this world and began self-learning. What started as a 
+				hobby soon turned into something <span class="text-importantParraf font-[300]">more professional as Istarted working with clients</span>, primarily focusing on creating animated stream packs 
+				and other designs for social media.
+				<br><br>
+				I decided to expand my skills and knowledge by exploring the field of programming. I started with web languages like HTML and CSS, and then 
+				ventured into more robust languages like C and C++. However, <span class="text-importantParraf font-[300]">my true ambition is to create my own video game</span>, which led me to delve into the world 
+				of C# and Unity for game development.
+				<br><br>
+				Outside of the screen, I enjoy activities that allow me to disconnect and recharge. I'm a cinephile and am always on the lookout for new movies to 
+				watch. Additionally, I love staying active by playing sports. And yes, I have a weakness for junk food; although it may seem contradictory to my love for 
+				sports, I manage to stay slim!
+			</p>
+
+			<div>
+				<p class="text-parraf font-[400] mt-3">What I can use:</p>
+				
+				<div class="flex flex-wrap text-center gap-3 mt-3 mb-3">
+					<Techno technology="HTML"/>
+					<Techno technology="CSS"/>
+					<Techno technology="PHP"/>
+					<Techno technology="C"/>
+					<Techno technology="C++"/>
+					<Techno technology="C#"/>
+					<Techno technology="Photoshop"/>
+					<Techno technology="After Effects"/>
+					<Techno technology="Windev"/>
+					<Techno technology="Unity"/>
+				</div>
+			</div>
+
+			<div>
+				<Link link="https://maps.app.goo.gl/MrqzDzJrYF5CKqEF9" text="42000, Saint-Étienne, FRANCE"/>
+			</div>
+
+			<div>
+				<Link link="mailto:nxrddinbenhadi@gmail.com" text="nxrddinbenhadi@gmail.com"/>
+			</div>
+
+			<div>
+				<Link link="#" text="Download Curriculum"/>
+			</div>
+
+			<div class="flex space-x-1">
+				<Link link="/" text="www"/>
+				<p>/</p>
+				<Link link="#" text="gh"/>
+				<p>/</p>
+				<Link link="#" text="tw"/>
+				<p>/</p>
+				<Link link="#" text="ig"/>
+				<p>/</p>
+				<Link link="#" text="be"/>
+			</div>
+		</Section>
+    </main>
+</Layout>

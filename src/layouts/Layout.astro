@@ -1,0 +1,77 @@
+---
+import Menu from '../components/Menu.astro';
+import '@fontsource/lato/300.css';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/700.css';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo/NixiusDev-Icon.png" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Menu />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+		font-family: 'Lato', system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+	body {
+        position: relative;
+        min-height: 100vh;
+        background-color: #0f111a;
+    }
+	@media (prefers-reduced-montion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+    body::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('public/GUI/Grid.png');
+        background-position: center;
+        opacity: 0.05;
+        z-index: -1;
+    }
+	@font-face {
+        font-family: 'DharmaGotic';
+        src: url('/fonts/DharmaGotic/DharmaGothicE-ExBold.ttf') format('truetype');
+    }
+	@font-face {
+        font-family: 'DharmaGotic-Regular';
+        src: url('/fonts/DharmaGotic/DharmaGothicE-Regular.ttf') format('truetype');
+    }
+    @font-face{
+        font-family: 'Lato';
+        src: url('/fonts/Lato/Lato-Light.ttf') format('truetype');
+    }
+	.font-dharma-gothic{
+		font-family: 'DharmaGotic', sans-serif;
+	}
+	.font-dharma-gothic-regular{
+		font-family: 'DharmaGotic-Regular', sans-serif;
+	}
+</style>
