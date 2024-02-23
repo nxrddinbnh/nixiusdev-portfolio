@@ -6,8 +6,8 @@ const { id, className, title } = Astro.props
     {
         title && title.first && title.second && title.bg && (
             <div class="flex items-center justify-center mb-3">
-                <h1 class="text-customWhite text-5xl mb-2 absolute z-10 font-semibold" style="text-shadow: 0 1px 4px #000">{title.first} <span class="text-customViolet">{title.second}</span></h1>
-                <h1 class="text-darkViolet text-9xl font-dharma-gothic-regular relative">{title.bg}</h1>
+                <h1 class="uppercase text-[var(--color-white-100)] text-5xl mb-2 absolute z-10 font-semibold" style="text-shadow: 0 1px 4px #000">{title.first} <span class="text-[var(--color-violet-200)]">{title.second}</span></h1>
+                <h1 class="uppercase text-[var(--color-violet-400)] text-9xl font-dharma-gothic-regular relative">{title.bg}</h1>
             </div>
         )
     }

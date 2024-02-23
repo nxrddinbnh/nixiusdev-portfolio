@@ -7,4 +7,6 @@ interface Props {
 const { text, link } = Astro.props
 ---
 
-<a href={link} class="text-importantParraf underline" target="_blank">{text}</a>
+<a href={link} class="text-[var(--color-violet-100)] underline relative inline-block hover:text-[var(--color-white-300)] transition-all duration-500 ease-in-out" target="_blank">
+    {text}
+</a>

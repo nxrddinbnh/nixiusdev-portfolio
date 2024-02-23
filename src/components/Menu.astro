@@ -3,19 +3,19 @@ import MailIcon from '../components/icons/Mail.astro';
 ---
 
 <nav class="fixed flex flex-col justify-between h-screen py-8 px-6 size-20 ml-2">
-    <a href="#top" class="mb-8 bg-customViolet rounded-md flex items-center justify-center transition-colors duration-300 ease-in-out hover:text-white">
-        <img src="../../logo/NixiusDev-Concept.png" alt="NX" class="w-auto h-auto max-h-8">
+    <a href="#top" class="mb-8 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-3">
+        <img src="/logo/NixiusDev-Icon.svg" class="w-8 h-8">
     </a>
 
     <div class="flex flex-col items-center justify-center">
-        <a href="#work" class="transition-colors duration-300 ease-in-out hover:text-white mb-10 text-lightWhite transform -rotate-90">WORK</a>
-        <a href="#about" class="transition-colors duration-300 ease-in-out hover:text-white text-lightWhite transform -rotate-90">ABOUT</a>
+        <a href="#work" class="mb-10 text-[var(--color-white-200)] transform -rotate-90 transition-colors duration-300 ease-in-out hover:text-white">WORK</a>
+        <a href="#about" class="text-[var(--color-white-200)] transform -rotate-90 transition-colors duration-300 ease-in-out hover:text-white">ABOUT</a>
     </div>
 
     <div class="relative mt-auto group">
-        <a href="mailto:nxrddinbenhadi@gmail.com" class="flex items-center justify-center transition-colors duration-300 ease-in-out hover:text-white text-lightWhite">
+        <a href="mailto:nxrddinbenhadi@gmail.com" class="flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-[1.20] text-[var(--color-white-200)]">
             <MailIcon class="w-8 h-8" />
         </a>
-        <span class="absolute invisible bottom-0 left-full text-lightWhite group-hover:visible mb-1">nxrddinbenhadi@gmail.com</span>
-    </div>
+        <span class="absolute invisible bottom-0 left-full text-[var(--color-white-100)] group-hover:visible ml-2 mb-1 transition-opacity duration-300">nxrddinbenhadi@gmail.com</span>
+    </div>    
 </nav>

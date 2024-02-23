@@ -1,24 +1,10 @@
 ---
 const PROJECTS = [
     {
-        title: 'GloomZ',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id commodo velit. Nullam sit amet massa et dolor aliquet ullamcorper sit amet sed libero.',
-        link: '#',
-        image: 'https://via.placeholder.com/1920x1080',
-        tags: ['C#', 'Unity']
-    },
-    {
-        title: 'Login & Sign Up',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id commodo velit. Nullam sit amet massa et dolor aliquet ullamcorper sit amet sed libero.',
-        link: '#',
-        image: '/projects/Login-SignUp.webp',
-        tags: ['HTML', 'CSS', 'PHP']
-    },
-    {
         title: 'Graphic Design 2021',
-        description: 'Selection of my first orders as a graphic designer. ',
+        description: 'Selection of my designs crafted for satisfied clients. A period where I completed over 100 projects, affording me the opportunity to cultivate and showcase my creativity, bolstering confidence in my abilities.',
         link: 'https://www.behance.net/gallery/168505035/Graphic-Design-2021',
-        image: '/projects/GraphicDesign-2021.jpg',
+        image: '/projects/GraphicDesign-2021.webp',
         tags: ['Photoshop', 'After Effects', 'Cinema 4D']
     }
 ]
@@ -26,16 +12,16 @@ const PROJECTS = [
 
 <article class="grid grid-cols-1 gap-8">
     {PROJECTS.map(({ title, description, image, tags, link }) => (
-        <div>
+        <div class="relative group">
             <a href={link} target="_blank" rel="noopener noreferrer">
-                <div class="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 transform-gpu hover:scale-105">
-                    <img class="object-cover w-full transition-filter duration-300" src={image} alt={`Screenshot of the project ${title}`} />
-                    <div class="absolute bottom-0 left-0 w-full h-full p-4 flex flex-col justify-end opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <h3 class="text-xl font-semibold mb-2 text-customWhite">{title}</h3>
-                        <p class="text-lightWhite mb-4">{description}</p>
+                <div class="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 transform-gpu hover:scale-105 relative">
+                    <img class="object-cover w-full" src={image} alt={`Screenshot of the project ${title}`} />
+                    <div class="absolute bottom-0 left-0 w-full p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-lg bg-black/60">
+                        <h3 class="text-xl font-semibold mb-2 text-white">{title}</h3>
+                        <p class="text-[var(--color-white-200)] text-pretty mb-4">{description}</p>
                         <ul class="flex flex-wrap gap-2">
                             {tags.map((tag) => (
-                                <li class="border-[1px] border-[#868a9f] text-parraf px-3 py-1 rounded-md">{tag}</li>
+                                <li class="border text-sm px-3 py-[6px] rounded-lg flex justify-center items-center border-gray-400 text-gray-400">{tag}</li>
                             ))}
                         </ul>
                     </div>

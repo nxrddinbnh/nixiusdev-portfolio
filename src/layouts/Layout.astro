@@ -18,7 +18,7 @@ const { title, description} = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/logo/NixiusDev-Icon.png" />
+		<link rel="icon" type="image/svg+xml" href="/logo/NixiusDev-Icon.svg" />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -29,6 +29,15 @@ const { title, description} = Astro.props;
 <style is:global>
 	:root {
 		color-scheme: light dark;
+		--color-white-100 : #eeeef2;
+		--color-white-200: #b2b4d3;
+		--color-white-300: #868a9f;
+
+		--color-violet-100: #c2c7e9;
+		--color-violet-200: #818fe5;
+		--color-violet-400: #1f2335;
+
+		--color-linktree: #43e660;
 	}
 	html {
 		font-family: 'Lato', system-ui, sans-serif;
@@ -73,5 +82,10 @@ const { title, description} = Astro.props;
 	}
 	.font-dharma-gothic-regular{
 		font-family: 'DharmaGotic-Regular', sans-serif;
+	}
+	p{
+		color: #868a9f;
+		margin-bottom: 10px;
+		text-wrap: pretty;
 	}
 </style>
