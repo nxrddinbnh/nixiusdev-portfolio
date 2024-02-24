@@ -3,7 +3,7 @@ Welcome to my portfolio repository! Here you'll find everything you need to know
 
 <div align="center">
   <a href="https://cozy-entremet-4db04c.netlify.app/">
-    <img src="./projects/nixiusdev-portfolio.webp">
+    <img src="./public/projects/nixiusdev-portfolio.webp">
   </a>
 </div>
 
