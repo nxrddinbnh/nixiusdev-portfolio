@@ -1,5 +1,6 @@
 ---
 import Menu from '../components/Menu.astro';
+import Footer from '../components/Footer.astro';
 import '@fontsource/lato/300.css';
 import '@fontsource/lato/400.css';
 import '@fontsource/lato/700.css';
@@ -18,12 +19,13 @@ const { title, description} = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/logo/NixiusDev-Icon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/nixiusdev-icon.svg" />
 		<title>{title}</title>
 	</head>
 	<body>
 		<Menu />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -32,50 +34,61 @@ const { title, description} = Astro.props;
 		--color-white-100 : #eeeef2;
 		--color-white-200: #b2b4d3;
 		--color-white-300: #868a9f;
-
 		--color-violet-100: #c2c7e9;
 		--color-violet-200: #818fe5;
 		--color-violet-400: #1f2335;
-
 		--color-linktree: #43e660;
 	}
+	::selection {
+        color: white;
+        background-color: var(--color-violet-200);
+    }
+	::-moz-selection {
+        color: white;
+        background-color: var(--color-violet-200);
+    }
 	html {
 		font-family: 'Lato', system-ui, sans-serif;
 		scroll-behavior: smooth;
+	}
+	@media (prefers-reduced-montion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 	body {
         position: relative;
         min-height: 100vh;
         background-color: #0f111a;
     }
-	@media (prefers-reduced-montion: reduce) {
-		html {
-			scroll-behavior: auto;
-		}
-	}
-    body::after {
+	body::after {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('/GUI/Grid.png');
+        background-image: url('/grid.svg');
         background-position: center;
-        opacity: 0.05;
+        opacity: 0.013;
         z-index: -1;
+    }
+	@media (max-width: 767px) {
+        body::after {
+            background-image: url('/grid-fill.svg');
+        }
     }
 	@font-face {
         font-family: 'DharmaGotic';
-        src: url('/fonts/DharmaGotic/DharmaGothicE-ExBold.ttf') format('truetype');
+        src: url('/fonts/DharmaGothicE-ExBold.ttf') format('truetype');
     }
 	@font-face {
         font-family: 'DharmaGotic-Regular';
-        src: url('/fonts/DharmaGotic/DharmaGothicE-Regular.ttf') format('truetype');
+        src: url('/fonts/DharmaGothicE-Regular.ttf') format('truetype');
     }
     @font-face{
         font-family: 'Lato';
-        src: url('/fonts/Lato/Lato-Light.ttf') format('truetype');
+        src: url('/fonts/Lato-Light.ttf') format('truetype');
     }
 	.font-dharma-gothic{
 		font-family: 'DharmaGotic', sans-serif;
@@ -83,9 +96,9 @@ const { title, description} = Astro.props;
 	.font-dharma-gothic-regular{
 		font-family: 'DharmaGotic-Regular', sans-serif;
 	}
-	p{
-		color: #868a9f;
-		margin-bottom: 10px;
-		text-wrap: pretty;
-	}
+	p {
+        color: var(--color-white-300);
+        margin-bottom: 10px;
+        text-wrap: pretty;
+    }
 </style>

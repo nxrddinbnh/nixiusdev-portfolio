@@ -13,7 +13,7 @@ const PROJECTS = [
 <article class="grid grid-cols-1 gap-8">
     {PROJECTS.map(({ title, description, image, tags, link }) => (
         <div class="relative group">
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a href={link} target="_blank" rel="noopener noreferrer" class="block">
                 <div class="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 transform-gpu hover:scale-105 relative">
                     <img class="object-cover w-full" src={image} alt={`Screenshot of the project ${title}`} />
                     <div class="absolute bottom-0 left-0 w-full p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-lg bg-black/60">

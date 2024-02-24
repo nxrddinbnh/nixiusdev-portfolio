@@ -2,9 +2,28 @@
 import MailIcon from '../components/icons/Mail.astro';
 ---
 
-<nav class="fixed flex flex-col justify-between h-screen py-8 px-6 size-20 ml-2">
+<!-- Menu for mobile devices -->
+<nav class="fixed top-0 left-0 z-50 w-full bg-black/20 backdrop-blur-lg flex justify-between items-center p-4 lg:hidden">
+    <div class="flex items-center space-x-8">
+        <a href="#top" class="transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-3">
+            <img src="/nixiusdev-icon.svg" class="size-8">
+        </a>
+    
+        <div class="flex justify-center items-center space-x-4">
+            <a href="#work" class="text-[var(--color-white-200)] transition-colors duration-300 ease-in-out hover:text-white">WORK</a>
+            <a href="#about" class="text-[var(--color-white-200)] transition-colors duration-300 ease-in-out hover:text-white">ABOUT</a>
+        </div>
+    </div>
+
+    <a href="mailto:nxrddinbenhadi@gmail.com" class="text-[var(--color-white-200)] transition-transform duration-300 ease-in-out transform hover:scale-105">
+        <MailIcon class="size-8" />
+    </a>
+</nav>
+
+<!-- Menu for desktop devices -->
+<nav class="fixed flex flex-col justify-between h-screen py-8 px-6 size-20 ml-2 hidden lg:flex">
     <a href="#top" class="mb-8 transition-transform duration-300 ease-in-out transform hover:scale-110 hover:rotate-3">
-        <img src="/logo/NixiusDev-Icon.svg" class="w-8 h-8">
+        <img src="/nixiusdev-icon.svg" class="size-8">
     </a>
 
     <div class="flex flex-col items-center justify-center">
@@ -16,6 +35,6 @@ import MailIcon from '../components/icons/Mail.astro';
         <a href="mailto:nxrddinbenhadi@gmail.com" class="flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-[1.20] text-[var(--color-white-200)]">
             <MailIcon class="w-8 h-8" />
         </a>
-        <span class="absolute invisible bottom-0 left-full text-[var(--color-white-100)] group-hover:visible ml-2 mb-1 transition-opacity duration-300">nxrddinbenhadi@gmail.com</span>
+        <span class="absolute invisible bottom-0 left-full text-white group-hover:visible ml-2 mb-1 transition-opacity duration-300">nxrddinbenhadi@gmail.com</span>
     </div>    
 </nav>

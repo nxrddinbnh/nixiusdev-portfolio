@@ -2,14 +2,12 @@
 const { id, className, title } = Astro.props
 ---
 
-<section id={id} class={`scroll-m-20 flex flex-col justify-center p-10 ${className}`}>
-    {
-        title && title.first && title.second && title.bg && (
-            <div class="flex items-center justify-center mb-3">
-                <h1 class="uppercase text-[var(--color-white-100)] text-5xl mb-2 absolute z-10 font-semibold" style="text-shadow: 0 1px 4px #000">{title.first} <span class="text-[var(--color-violet-200)]">{title.second}</span></h1>
-                <h1 class="uppercase text-[var(--color-violet-400)] text-9xl font-dharma-gothic-regular relative">{title.bg}</h1>
-            </div>
-        )
-    }
+<section id={id} class={`flex flex-col justify-center p-10 ${className}`}>
+    {title && title.first && title.second && title.bg && (
+        <div class="flex items-center justify-center mb-3">
+            <h1 class={`uppercase text-[var(--color-white-100)] mb-2 absolute z-10 font-semibold sm:text-5xl text-4xl`} style="text-shadow: 0 1px 4px #000">{title.first} <span class="text-[var(--color-violet-200)]">{title.second}</span></h1>
+            <h1 class={`uppercase text-[var(--color-violet-400)] font-dharma-gothic-regular relative sm:text-9xl text-8xl`} style="user-select: none;">{title.bg}</h1>
+        </div>
+    )}
     <slot />
 </section>
