@@ -1,9 +1,6 @@
 ---
 import Menu from '../components/Menu.astro';
 import Footer from '../components/Footer.astro';
-import '@fontsource/lato/300.css';
-import '@fontsource/lato/400.css';
-import '@fontsource/lato/700.css';
 
 interface Props {
 	title: string;
@@ -29,6 +26,7 @@ const { title, description} = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 	:root {
 		color-scheme: light dark;
 		--color-white-100 : #eeeef2;
@@ -36,6 +34,7 @@ const { title, description} = Astro.props;
 		--color-white-300: #868a9f;
 		--color-violet-100: #c2c7e9;
 		--color-violet-200: #818fe5;
+		--color-violet-300: #0f1430;
 		--color-violet-400: #1f2335;
 		--color-linktree: #43e660;
 	}
@@ -85,10 +84,6 @@ const { title, description} = Astro.props;
 	@font-face {
         font-family: 'DharmaGotic-Regular';
         src: url('/fonts/DharmaGothicE-Regular.ttf') format('truetype');
-    }
-    @font-face{
-        font-family: 'Lato';
-        src: url('/fonts/Lato-Light.ttf') format('truetype');
     }
 	.font-dharma-gothic{
 		font-family: 'DharmaGotic', sans-serif;
