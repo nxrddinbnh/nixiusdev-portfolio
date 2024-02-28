@@ -2,7 +2,7 @@
 Welcome to my portfolio repository! Here you'll find everything you need to know about me and my projects.
 
 <div align="center">
-  <a href="https://cozy-entremet-4db04c.netlify.app/">
+  <a href="https://nixiusdev.netlify.app/">
     <img src="./public/projects/nixiusdev-portfolio.webp">
   </a>
 </div>
