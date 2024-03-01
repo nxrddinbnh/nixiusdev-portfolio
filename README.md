@@ -1,4 +1,4 @@
-# NixiusDev Portfolio
+# Nourddin Portfolio
 Welcome to my portfolio repository! Here you'll find everything you need to know about me and my projects.
 
 <div align="center">
