@@ -2,7 +2,7 @@
 Welcome to my portfolio repository! Here you'll find everything you need to know about me and my projects.
 
 <div align="center">
-  <a href="https://nixiusdev.netlify.app/">
+  <a href="https://nxrddinbnh.netlify.app/">
     <img src="./public/projects/nxrddinbnh-portfolio.webp">
   </a>
 </div>
