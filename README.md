@@ -3,7 +3,7 @@ Welcome to my portfolio repository! Here you'll find everything you need to know
 
 <div align="center">
   <a href="https://nixiusdev.netlify.app/">
-    <img src="./public/projects/nixiusdev-portfolio.webp">
+    <img src="./public/projects/nxrddinbnh-portfolio.webp">
   </a>
 </div>
 
