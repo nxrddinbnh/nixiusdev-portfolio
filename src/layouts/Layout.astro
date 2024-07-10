@@ -38,11 +38,15 @@ const { title, description} = Astro.props;
 		--color-violet-400: #1f2335;
 		--color-linktree: #43e660;
 	}
-	::selection,
-	::-moz-selection {
-        color: white;
+	::selection {
+		color: white;
         background-color: var(--color-violet-200);
-    }
+	}
+	::-moz-selection,
+	::-webkit-selection {
+		color: white;
+        background-color: var(--color-violet-200);
+	}
 	html {
 		font-family: 'Lato', system-ui, sans-serif;
 		scroll-behavior: smooth;
